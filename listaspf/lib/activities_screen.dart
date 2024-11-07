@@ -117,11 +117,9 @@ class _ActivitiesScreenState extends State<ActivitiesScreen> {
             ),
             SizedBox(height: 20),
             // Selector de actividad
-            Text(
-              'Selecciona la actividad:',
-              style: TextStyle(
-                  fontSize: 16, color: Color.fromARGB(255, 177, 177, 177)),
-            ),
+            Text('Selecciona la actividad:',
+                style: TextStyle(
+                    fontSize: 16, color: Color.fromARGB(255, 177, 177, 177))),
             SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
