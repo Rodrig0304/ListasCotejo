@@ -116,7 +116,7 @@ class _ActivitiesScreenState extends State<ActivitiesScreen> {
               style: TextStyle(fontSize: 18, color: Colors.black),
             ),
             SizedBox(height: 20),
-            // Selector de actividad
+
             Text('Selecciona la actividad:',
                 style: TextStyle(
                     fontSize: 16, color: Color.fromARGB(255, 177, 177, 177))),
@@ -180,6 +180,7 @@ class _ActivitiesScreenState extends State<ActivitiesScreen> {
               ],
             ),
             SizedBox(height: 20),
+
             // Botones de revisar o no entregar
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -206,7 +207,7 @@ class _ActivitiesScreenState extends State<ActivitiesScreen> {
                 ElevatedButton(
                   onPressed: _previousStudent,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black, // Botón negro
+                    backgroundColor: Colors.black,
                   ),
                   child: Text(
                     'Anterior',
@@ -216,7 +217,7 @@ class _ActivitiesScreenState extends State<ActivitiesScreen> {
                 ElevatedButton(
                   onPressed: _nextStudent,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black, // Botón negro
+                    backgroundColor: Colors.black,
                   ),
                   child: Text(
                     'Siguiente',
@@ -226,6 +227,7 @@ class _ActivitiesScreenState extends State<ActivitiesScreen> {
               ],
             ),
             SizedBox(height: 20),
+
             // Mostrar el historial de actividades para el estudiante actual
             Expanded(
               child: SingleChildScrollView(
@@ -245,7 +247,9 @@ class _ActivitiesScreenState extends State<ActivitiesScreen> {
                         ),
                       ],
                     ),
+
                     SizedBox(height: 10),
+
                     // Fila con los estudiantes y botones de revisión
                     for (int i = 0; i < _students.length; i++) ...[
                       Row(

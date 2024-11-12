@@ -19,13 +19,13 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Título de bienvenida
                 Text('Bienvenido al Sistema',
                     style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
                         color: Colors.black)),
                 SizedBox(height: 30),
+
                 // Campo de texto para el usuario
                 _buildTextField(
                   controller: _usernameController,
@@ -33,6 +33,7 @@ class LoginScreen extends StatelessWidget {
                   icon: Icons.person,
                 ),
                 SizedBox(height: 15),
+
                 // Campo de texto para la contraseña
                 _buildTextField(
                   controller: _passwordController,
@@ -41,6 +42,7 @@ class LoginScreen extends StatelessWidget {
                   obscureText: true,
                 ),
                 SizedBox(height: 20),
+
                 // Botón de inicio de sesión
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -83,15 +85,13 @@ class LoginScreen extends StatelessWidget {
     return TextField(
       controller: controller,
       obscureText: obscureText,
-      style: TextStyle(fontSize: 16), // Tamaño de letra en el campo
+      style: TextStyle(fontSize: 16),
       decoration: InputDecoration(
         labelText: label,
-        labelStyle: TextStyle(
-            color: Colors.black, fontSize: 16), // Color de la etiqueta
-        prefixIcon: Icon(icon, color: Colors.black), // Icono del campo
+        labelStyle: TextStyle(color: Colors.black, fontSize: 16),
+        prefixIcon: Icon(icon, color: Colors.black),
         filled: true,
-        fillColor: const Color.fromARGB(
-            255, 207, 207, 207), // Color de fondo del campo
+        fillColor: const Color.fromARGB(255, 207, 207, 207),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
         ),

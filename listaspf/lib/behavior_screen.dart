@@ -7,7 +7,7 @@ class BehaviorScreen extends StatefulWidget {
 }
 
 class _BehaviorScreenState extends State<BehaviorScreen> {
-  final String _username = "Rodrigo"; // Nombre del usuario que inició sesión
+  final String _username = "Rodrigo";
   final List<String> _students = [
     'Alumno 1',
     'Alumno 2',
@@ -138,6 +138,7 @@ class _BehaviorScreenState extends State<BehaviorScreen> {
               style: TextStyle(fontSize: 18, color: Colors.black),
             ),
             SizedBox(height: 20),
+
             // Mostramos solo el alumno actual
             Text(
               'Alumno: ${_students[_currentStudentIndex]}',
@@ -163,6 +164,7 @@ class _BehaviorScreenState extends State<BehaviorScreen> {
               ],
             ),
             SizedBox(height: 20),
+
             // Botones para navegar entre los alumnos
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -190,6 +192,7 @@ class _BehaviorScreenState extends State<BehaviorScreen> {
               ],
             ),
             SizedBox(height: 20),
+
             // Mostrar el historial de conducta para todas las fechas
             Expanded(
               child: SingleChildScrollView(
@@ -212,6 +215,7 @@ class _BehaviorScreenState extends State<BehaviorScreen> {
                         }).toList(),
                       ],
                     ),
+
                     // Listado de estudiantes y registros de conducta
                     for (int i = 0; i < _students.length; i++) ...[
                       Row(

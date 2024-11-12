@@ -83,7 +83,7 @@ class MenuScreen extends StatelessWidget {
         ElevatedButton(
           style: ElevatedButton.styleFrom(
             padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 30.0),
-            backgroundColor: Color(0xFF1976D2), // Azul de la paleta escolar
+            backgroundColor: Color(0xFF1976D2),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15),
             ),

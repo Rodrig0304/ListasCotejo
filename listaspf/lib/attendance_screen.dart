@@ -7,7 +7,7 @@ class AttendanceScreen extends StatefulWidget {
 }
 
 class _AttendanceScreenState extends State<AttendanceScreen> {
-  final String _username = "Rodrigo"; // Nombre del usuario que inició sesión
+  final String _username = "Rodrigo";
   final List<String> _students = [
     'Alumno 1',
     'Alumno 2',
@@ -87,7 +87,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
 
   // Método para regresar al menú
   void _goToMenu(BuildContext context) {
-    Navigator.pop(context); // Esto regresa a la pantalla anterior (el menú)
+    Navigator.pop(context);
   }
 
   @override
@@ -103,14 +103,14 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black, // Color negro
+        backgroundColor: Colors.black,
         title: Text(
           'Asistencia',
           style: TextStyle(color: Colors.white),
         ),
         leading: IconButton(
           icon: Icon(Icons.menu, color: Colors.white),
-          onPressed: () => _goToMenu(context), // Regresar al menú
+          onPressed: () => _goToMenu(context),
         ),
         actions: [
           IconButton(
@@ -137,7 +137,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
             ElevatedButton(
               onPressed: () => _selectDate(context),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black, // Botón negro
+                backgroundColor: Colors.black,
                 padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 20.0),
               ),
               child: Text(DateFormat('dd/MM/yyyy').format(_selectedDate),
@@ -149,12 +149,14 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
               style: TextStyle(fontSize: 18, color: Colors.black),
             ),
             SizedBox(height: 20),
+
             // Mostramos solo el alumno actual
             Text(
               'Alumno: ${_students[_currentStudentIndex]}',
               style: TextStyle(fontSize: 18, color: Colors.black),
             ),
             SizedBox(height: 20),
+
             // Botones para marcar la asistencia
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -174,6 +176,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
               ],
             ),
             SizedBox(height: 20),
+
             // Botones para navegar entre los alumnos
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -181,7 +184,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
                 ElevatedButton(
                   onPressed: _previousStudent,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black, // Botón negro
+                    backgroundColor: Colors.black,
                   ),
                   child: Text(
                     'Anterior',
@@ -191,7 +194,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
                 ElevatedButton(
                   onPressed: _nextStudent,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black, // Botón negro
+                    backgroundColor: Colors.black,
                   ),
                   child: Text(
                     'Siguiente',
@@ -201,6 +204,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
               ],
             ),
             SizedBox(height: 20),
+
             // Mostrar el historial de asistencias para la fecha seleccionada
             Expanded(
               child: SingleChildScrollView(
@@ -223,6 +227,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
                       ],
                     ),
                     SizedBox(height: 10),
+
                     // Fila con los estudiantes y botones de presencia/ausencia
                     for (int i = 0; i < _students.length; i++) ...[
                       Row(
